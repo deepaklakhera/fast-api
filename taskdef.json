@@ -7,7 +7,7 @@
     "executionRoleArn": "arn:aws:iam::448049829962:role/ecsTaskExecutionRole",
     "containerDefinitions": [
       {
-        "name": "fastapi-app",
+        "name": "fastapi-container",
         "image": "REPLACE_ME",  
         "portMappings": [
           {

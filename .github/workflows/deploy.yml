@@ -38,7 +38,7 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: taskdef.json
-        container-name: ${{ secrets.CONTAINER_NAME }}
+        container-name: fastapi-container
         image: 448049829962.dkr.ecr.$us-east-1.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
 
     - name: Deploy to Amazon ECS

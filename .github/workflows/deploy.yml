@@ -37,7 +37,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: ${{ secrets.ECS_TASK_DEFINITION }}
+        task-definition: fastapi-task
         container-name: ${{ secrets.CONTAINER_NAME }}
         image: 448049829962.dkr.ecr.$us-east-1.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
 

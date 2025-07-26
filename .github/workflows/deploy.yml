@@ -35,7 +35,7 @@ jobs:
 
     - name: Fill in new image ID in the Amazon ECS task definition
       id: task-def
-      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      uses: aws-actions/amazon-ecs-update-task-definition@v1
       with:
         task-definition: fastapi-task
         container-name: ${{ secrets.CONTAINER_NAME }}

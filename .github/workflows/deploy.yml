@@ -39,7 +39,7 @@ jobs:
       with:
         task-definition: ${{ secrets.ECS_TASK_DEFINITION }}
         container-name: ${{ secrets.CONTAINER_NAME }}
-        image: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
+        image: 448049829962.dkr.ecr.$us-east-1.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
 
     - name: Deploy to Amazon ECS
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1

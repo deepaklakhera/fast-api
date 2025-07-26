@@ -39,7 +39,7 @@ jobs:
       with:
         task-definition: taskdef.json
         container-name: "fastapi-container"
-        image: 448049829962.dkr.ecr.$us-east-1.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
+        image: 448049829962.dkr.ecr.us-east-1.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
 
     - name: Deploy to Amazon ECS
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
